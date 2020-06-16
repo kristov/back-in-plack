@@ -73,7 +73,7 @@ You need to return an arrayref from your plack application:
 
 An that is it. You can see that 200 is the response code, the second arrayref are headers you want to return, and you can go nuts replacing "Hello" with any damn HTML you please. You can even generate that HTML in *any way you like*! Imagine the freedom to do whatever you want!! Look at all the nonsense that *isn't* there. Every time your browser makes a request that sub is invoked with no nonsense whatsoever. So clean, so simple.
 
-Unfortunately `use strict; use warnings;` is a bit of Perl nonsense that we must do. I tried to find out if it were possible to compile Perl with strict and warnings always turned on but didn't get far. You can achive the same thing like so:
+Unfortunately `use strict; use warnings;` is a bit of Perl nonsense that we must do. I tried to find out if it were possible to compile Perl with strict and warnings always turned on but didn't get far. You can achieve the same thing like so:
 
     perl -Mstrict -Mwarnings -Ilocal/lib/perl5 local/bin/plackup app.psgi
 
@@ -85,7 +85,7 @@ Or like whatever you want.
 
 # Adding some nonsense
 
-Now I have shown you the (relatively) pure path, I feel obliged to add some nonsense. The good news is that the following nonsense is *completely optional* for you. Take it or leave it! The first is an object that we will create from the `$env` variable, since `$env` is a little bit unweildly:
+Now I have shown you the (relatively) pure path, I feel obliged to add some nonsense. The good news is that the following nonsense is *completely optional* for you. Take it or leave it! The first is an object that we will create from the `$env` variable, since `$env` is a little bit unwieldy:
 
     #!/usr/bin/env perl
     use strict;
@@ -119,9 +119,9 @@ Huh. Well, it gives you a convenient way to get at request parameters. The secon
     };
     $app;
 
-The `Plack::Response` has some some intertesting things there, like setting headers and doing redirects.
+The `Plack::Response` has some some interesting things there, like setting headers and doing redirects.
 
-Ok, one more bit of nonsense for you:
+OK, one more bit of nonsense for you:
 
     echo "requires 'Template';" >> cpanfile
     carton install
@@ -155,4 +155,4 @@ Wowee, you just separated your application and presentation logic like a boss.
 
 ## The End
 
-That is literally and figuratively the end. Like WTF else do you need? Go banannas adding whatever crap you want after that. Add application builders, factories, design patterns, callback hooks, dispatch logic, MVC, MVP, MVVM... Just know that all that crap and nonsense is on *you* - you did that and no one else!
+That is literally and figuratively the end. Like WTF else do you need? Go bananas adding whatever crap you want after that. Add application builders, factories, design patterns, callback hooks, dispatch logic, MVC, MVP, MVVM... Just know that all that crap and nonsense is on *you* - you did that and no one else!
